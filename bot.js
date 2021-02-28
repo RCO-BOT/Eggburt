@@ -59,10 +59,6 @@ for (const folder of folders) {
     client.registry.registerCommandsIn(join(__dirname, `commands/${folder}/`));
 }
 
-config({
-    path: __dirname + "/.env"
-});
-
 mongoose.connect(process.env.MONGODB, {
     keepAlive: true,
     useNewUrlParser: true,
