@@ -26,8 +26,6 @@ module.exports = class ban extends Command {
 
   async run(msg, { user, reason }){
 
-  
-    
     if(!USER) return msg.say(`I couldn't find that user!`)
 
     if(!msg.member.hasPermission('BAN_MEMBERS')) return msg.say(`You don't have permission to use this command`)

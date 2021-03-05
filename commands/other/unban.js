@@ -18,6 +18,7 @@ module.exports = class unban extends Command {
   }
   async run(msg, { user }) {
     
+    
     if(!msg.member.hasPermission('BAN_MEMBERS')) return msg.say(`You don't have permission to use this command`)
     if(!msg.guild.me.hasPermission('BAN_MEMBERS')) return msg.say(`I need the \`Ban Members\` permission to unban members!`)
     

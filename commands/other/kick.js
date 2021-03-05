@@ -22,6 +22,7 @@ module.exports = class kick extends Command {
       }]
     })
   }
+  
   async run(msg, { user, reason }) {
 
    

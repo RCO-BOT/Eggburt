@@ -12,12 +12,13 @@ module.exports = class say extends Command {
                 type: "string", 
                 prompt: "What do you want me to say?", 
                 key: "string"
-            }]
+            }] 
         })
     }
     async run(msg, { string }){
 
         msg.say(string).catch(err => console.log(err))
 
+        
     }
 }
