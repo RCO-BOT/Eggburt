@@ -1,0 +1,6 @@
+{
+    "For": "Kicks & Ban logging",
+    "punishmentLogs": "816624856757698610", 
+    "Explain": "Replace LOG_CHANNEL with your disired log channel ID. Leave blank to disable logging" 
+}
+
