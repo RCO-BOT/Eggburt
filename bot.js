@@ -59,6 +59,10 @@ for (const folder of folders) {
     client.registry.registerCommandsIn(join(__dirname, `commands/${folder}/`));
 }
 
+config({
+    path: __dirname + "/.env"
+});
+
 mongoose.connect(process.env.MONGODB, {
     keepAlive: true,
     useNewUrlParser: true,
@@ -87,6 +91,7 @@ client.commonEmojis = {
     cross: "798518287537143828"
 }
 
+
 client.missingDBErrorSent = false
 client.formattedOwners = [...process.env.owners.split('|')].map(u => `<@${u}>`).join(' or ')
 
@@ -94,9 +99,15 @@ client.once('ready', async () => {
 
     console.log(`Alive and ready to do eggy stuffs!`)
 
+    let statuses = [
+        `Egg Hunt 2021!`,
+    ]
+
+    let randomStatus = statuses[Math.floor(Math.random() * statuses.length)]
+
     client.user.setPresence({
         activity: {
-            name: 'Egg Hunt 2021!',
+            name: randomStatus,
             type: "PLAYING"
         }
     })
