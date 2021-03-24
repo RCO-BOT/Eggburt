@@ -22,14 +22,14 @@ module.exports = class privacy extends Command {
             pageHeader: "IMPORTANT", 
             content: [
                 {
-                    text: "By using the egg tracking features you consent to us storing the relivent data needed from you to connect you to your database collection"
+                    text: "By using the egg tracking features you consent to us storing the relevant data needed from you to connect you to your database collection"
                 }
             ]
         },{
             pageHeader: "What data we collect", 
             content: [
                 {
-                    text: "Your Discord user ID - This is public and accessable by every Discord users. We use this ID to link you to your database collection"
+                    text: "Your Discord user ID - This is public and accessible by every Discord users. We use this ID to link you to your database collection"
                 }
             ]
         }, {

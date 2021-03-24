@@ -36,7 +36,6 @@ module.exports = class deleteegg extends Command {
         .setFooter(this.client.user.username, this.client.user.displayAvatarURL({dynamic: true}))).catch(err => console.log(err))
 
         EGGS.eggs = EGGS.eggs.filter(e => e.name !== name)
-        EGGS.eggsInDB--
         EGGS.save().catch(err => console.log(err))
 
         return msg.say(new MessageEmbed()

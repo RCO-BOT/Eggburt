@@ -35,7 +35,7 @@ module.exports = class eggs extends Command {
 
         } else {
 
-            const eggs = Array.from(EGGS.eggs).map(e => e.name)
+            const eggs = Array.from(EGGS.eggs).map(e => `${e.name} - [Video](${e.link})`)
             const eggsPerPage = 10
             const chunks = new Array(Math.ceil(eggs.length / eggsPerPage)).fill().map(_ => eggs
                 .splice(0, eggsPerPage).map(egg => `• ${egg}`))

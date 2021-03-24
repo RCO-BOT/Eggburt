@@ -57,7 +57,7 @@ module.exports = class egg extends Command {
                 .setImage(eggToFind.thumbnail)
                 .setColor("RANDOM")
                 .setTimestamp()
-                .setFooter(`Egg Count: ${EGGS.eggsInDB}`, this.client.user.displayAvatarURL({ dynamic: true }))
+                .setFooter(`Egg Count: ${EGGS.eggs.length}`, this.client.user.displayAvatarURL({ dynamic: true }))
             ).catch(err => console.log(err))
         }
     }

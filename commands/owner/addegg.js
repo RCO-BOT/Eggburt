@@ -45,8 +45,7 @@ module.exports = class addegg extends Command {
         if (!EGGS) {
             new this.client.dbs.eggs({
                 DB_ID: process.env.DB_ID,
-                eggs: [{ name, link, title, thumbnail }],
-                eggsInDB: 1
+                eggs: [{ name, link, title, thumbnail }]
             }).save().catch(err => console.log(err))
             return msg.say(addedEmbed).catch(err => console.log(err))
         }
@@ -59,7 +58,6 @@ module.exports = class addegg extends Command {
                 .setTimestamp())
         } else {
             EGGS.eggs.push({ name, link, name, thumbnail })
-            EGGS.eggsInDB++
 
             EGGS.save().catch(err => console.log(err))
             return msg.say(addedEmbed).catch(err => console.log(err))

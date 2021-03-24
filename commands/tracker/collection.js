@@ -68,7 +68,7 @@ module.exports = class collection extends Command {
                 
                 const eggs = Array.from(EGGS.eggs).map(e => e.name)
                 const eggsPerPage = 10
-                const chunks = new Array(Math.ceil(eggs.length / eggsPerPage)).fill().map(_ => eggs.splice(0, eggsPerPage).sort((a, b) => P.collectedEggs.includes(b) - P.collectedEggs.includes(a)).map(egg => `• ${egg[0].toLowerCase() + egg.substring(1)} | ${P.collectedEggs.includes(egg) ? tickEmoji : crossEmoji }`))
+                const chunks = new Array(Math.ceil(eggs.length / eggsPerPage)).fill().map(_ => eggs.splice(0, eggsPerPage).sort((a, b) => P.collectedEggs.includes(b) - P.collectedEggs.includes(a)).map(egg => `• ${egg.toUpperCase()} | ${P.collectedEggs.includes(egg) ? tickEmoji : crossEmoji }`))
 
                 if(chunks.length > 0){
                     chunks.forEach(chunk => {
