@@ -93,7 +93,7 @@ client.commonEmojis = {
 
 
 client.missingDBErrorSent = false
-client.formattedOwners = [...process.env.owners.split('|')].map(u => `<@${u}>`).join(' or ')
+client.formattedOwners = [...process.env.OWNERS.split('|')].map(u => `<@${u}>`).join(' or ')
 
 client.once('ready', async () => {
 
