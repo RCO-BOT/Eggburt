@@ -23,7 +23,7 @@ module.exports = class botinfo extends Command {
         
         msg.say(new MessageEmbed()
             .setAuthor(this.client.user.username, this.client.user.displayAvatarURL({dynamic: true}))
-            .setDescription(stripIndents`Created by ${this.client.users.cache.get(`${[...process.env.owners.split('|')][0]}`)}
+            .setDescription(stripIndents`Created by ${this.client.users.cache.get(`${[...process.env.OWNERS.split('|')][0]}`)}
 
             \`\`\`diff
             - A ValAlpha Production
